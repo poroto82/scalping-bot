@@ -1,6 +1,6 @@
 # Scalping Bot con Telegraf
 
-Este es un bot de scalping desarrollado en Node.js utilizando Telegraf. El bot está diseñado para realizar operaciones de scalping en un mercado específico.
+Este es un bot de scalping desarrollado en Node.js utilizando Telegraf. El bot está diseñado para realizar operaciones de scalping en BINGX y sus calculos son Stockastic y Cruce de EMA de dos periodos.
 
 ## Configuración del Bot de Telegram
 
