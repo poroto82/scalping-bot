@@ -1,8 +1,7 @@
 import { config } from 'dotenv';
-import { calculations } from "./utils.js";
+import { calculations } from "./calculate.js";
 import { Telegraf } from 'telegraf'
-import { message } from 'telegraf/filters'
-import { getAllOrders, getHistoricalTrades, getOrder, getPairPrice, trade } from './bingXProvider.js';
+import { getPairPrice, trade } from './bingXProvider.js';
 
 config();
 
@@ -148,17 +147,6 @@ bot.command("buy", (ctx) => {
     trade(process.env.PAR,'BUY',1).then(rta=>{
         ctx.reply('Orden de compra Generada id: <b>'+rta.orderId+'</b>', { parse_mode: 'HTML' })
     })  
-})
-
-
-bot.command("getorder", (ctx) => {
-    // getAllOrders("1751234035385892864").then(rta=>{
-    //     console.log(rta)
-    //     ctx.reply(rta)
-    // })
-    getOrder("1751234035385892864").then(rta=>{
-        ctx.reply(JSON.stringify(rta))
-    })
 })
 
 bot.command("sell", (ctx) => {
