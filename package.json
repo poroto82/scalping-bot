@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "bot.js",
   "author": "poroto82 <poroto82@gmail.com>",
+  "type": "module",
   "license": "MIT",
   "dependencies": {
     "crypto-js": "^4.2.0",

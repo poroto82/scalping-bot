@@ -5,6 +5,8 @@ export async function calculations() {
         const klines1Min = await fetchKlines('1m');
         const klines3Min = await fetchKlines('3m');
 
+        console.log(klines3Min)
+
         if (klines1Min && klines3Min){
 
             const ema9_1minuto = calculateEMA(klines1Min, 9);
